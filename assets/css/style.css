@@ -505,6 +505,34 @@ body.nav-active {
   width: 100%;
 }
 
+.move-anim {
+  animation: move 5s linear infinite;
+  -webkit-animation: move 5s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -o-transform: translateY(30px);
+  }
+}
+
+.has-bg-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 /*-----------------------------------*\
   #PRELOAD
 \*-----------------------------------*/
@@ -1200,10 +1228,148 @@ body.nav-active {
   #MENU
 \*-----------------------------------*/
 
+.menu .section-title {
+  margin-block-end: 40px;
+}
+
+.menu .grid-list {
+  margin-block-end: 50px;
+}
+
+.menu .menu-card {
+  display: flex;
+  /* justify-content: flex-start; */
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.hover\:card .card-banner {
+  background-color: var(--gold-crayola);
+}
+
+.hover\:card .card-banner .img-cover {
+  transition: var(--transition-2);
+  -webkit-transition: var(--transition-2);
+  -moz-transition: var(--transition-2);
+  -ms-transition: var(--transition-2);
+  -o-transition: var(--transition-2);
+}
+
+.hover\:card:is(:hover, :focus-within) .card-banner .img-cover {
+  opacity: 0.7;
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.menu-card .card-banner {
+  flex-shrink: 0;
+  border-radius: var(--radius-24);
+  -webkit-border-radius: var(--radius-24);
+  -moz-border-radius: var(--radius-24);
+  -ms-border-radius: var(--radius-24);
+  -o-border-radius: var(--radius-24);
+}
+
+.menu-card .card-title {
+  transition: var(--transition-1);
+  -webkit-transition: var(--transition-1);
+  -moz-transition: var(--transition-1);
+  -ms-transition: var(--transition-1);
+  -o-transition: var(--transition-1);
+}
+
+.menu-card .card-title:is(:hover, :focus-visible) {
+  color: var(--gold-crayola);
+}
+
+.menu-card .badge {
+  background-color: var(--gold-crayola);
+  color: var(--eerie-black-1);
+  font-family: var(--fontFamily-forum);
+  max-width: max-content;
+  line-height: var(--lineHeight-6);
+  text-transform: uppercase;
+  padding-inline: 10px;
+  margin-block: 10px;
+}
+
+.menu-card .span {
+  margin-block: 10px;
+  color: var(--gold-crayola);
+}
+
+.menu-card .card-text {
+  color: var(--quick-silver);
+  line-height: var(--lineHeight-4);
+}
+
+.menu-text .span {
+  display: inline-block;
+  color: var(--gold-crayola);
+}
+
+.menu .btn {
+  margin-inline: auto;
+  margin-block-start: 26px;
+}
+
+.menu .shape {
+  display: block;
+  width: 70%;
+}
+
+.menu .shape-2 {
+  top: 0;
+  left: 0;
+}
+
+.menu .shape-3 {
+  bottom: 0;
+  right: 0;
+}
+
 /*-----------------------------------*\
   #TESTIMONIALS
 \*-----------------------------------*/
 
+.testi {
+  padding-block-end: 340px;
+  position: static;
+}
+
+.testi .quote {
+  font-size: 7rem;
+  font-family: var(--fontFamily-forum);
+  line-height: 0.7rem;
+}
+
+.testi .warapper {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-block: 40px 50px;
+}
+
+.testi .separator {
+  animation: rotate360 15s linear infinite;
+  -webkit-animation: rotate360 15s linear infinite;
+}
+
+.profile .img {
+  margin-inline: auto;
+  border-radius: var(--radius-circle);
+}
+
+.profile .profile-name {
+  margin-block: 20px 10px;
+  font-weight: var(--weight-700);
+  color: var(--gold-crayola);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-3);
+}
 /*-----------------------------------*\
   #RESERVATION
 \*-----------------------------------*/
