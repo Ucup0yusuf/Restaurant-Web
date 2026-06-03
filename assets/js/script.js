@@ -20,6 +20,32 @@ const addEventOnElements = function (elements, eventType, callback) {
 const navbar = document.querySelector("[data-navbar]");
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const overlay = document.querySelector("[data-overlay]");
+const backTopBtn = document.querySelector("[data-back-top-btn]");
+
+// active nav-links when click
+const navLinks = document.querySelectorAll("[data-nav-link]");
+
+// active nav-link on history change
+window.addEventListener("popstate", function () {
+  const currentHash = window.location.hash;
+
+  navLinks.forEach((n) => {
+    n.classList.remove("active");
+
+    // check if the nav-link has the same hash as the current URL
+    if (n.getAttribute("href") === currentHash) {
+      n.classList.add("active");
+    }
+  });
+});
+
+const navLinkAction = function () {
+  // toggle acvtive class on each nav-link
+  navLinks.forEach((n) => n.classList.remove("active"));
+  this.classList.add("active");
+};
+
+addEventOnElements(navLinks, "click", navLinkAction);
 
 const toggleNavbar = function () {
   navbar.classList.toggle("active");
@@ -41,8 +67,10 @@ const hideHeader = function () {
 
   if (isScrollBottom) {
     header.classList.add("hide");
+    backTopBtn.classList.add("active");
   } else {
     header.classList.remove("hide");
+    backTopBtn.classList.remove("active");
   }
 
   lastScrollPos = window.scrollY;
@@ -51,9 +79,12 @@ const hideHeader = function () {
 window.addEventListener("scroll", function () {
   if (window.scrollY >= 50) {
     header.classList.add("active");
+    backTopBtn.classList.add("active");
+
     hideHeader();
   } else {
     header.classList.remove("active");
+    backTopBtn.classList.remove("active");
   }
 
   lastScrollPos = window.scrollY;
@@ -122,20 +153,6 @@ addEventOnElements(
 );
 
 window.addEventListener("load", startAutoSlide);
-
-/**
- * BACK TOP BTN
- */
-
-const backTopBtn = document.querySelector("[data-back-top-btn]");
-
-window.addEventListener("scroll", function () {
-  if (window.scrollY >= 50) {
-    backTopBtn.classList.add("active");
-  } else {
-    backTopBtn.classList.remove("active");
-  }
-});
 
 // Parallax effect
 

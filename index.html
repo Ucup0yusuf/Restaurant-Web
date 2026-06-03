@@ -31,7 +31,7 @@
     <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg" />
     <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg" />
   </head>
-  <body>
+  <body id="top">
     <!-- prealoader -->
 
     <div class="preload" data-preaload>
@@ -68,7 +68,7 @@
             <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
           </div>
 
-          <span class="span">+44 987 654 3210</span>
+          <span class="span link">+44 987 654 3210</span>
         </a>
 
         <a href="mailto:info@restaurant.com" class="topbar-item">
@@ -76,7 +76,7 @@
             <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
           </div>
 
-          <span class="span">info@restaurant.com</span>
+          <span class="span link">info@restaurant.com</span>
         </a>
       </div>
     </div>
@@ -84,7 +84,7 @@
     <!-- Header -->
     <header class="header" data-header>
       <div class="container">
-        <a href="#" class="logo">
+        <a href="#home" class="logo">
           <img
             src="./assets/images/logo.svg"
             width="160"
@@ -98,7 +98,7 @@
             <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
           </button>
 
-          <a href="#" class="logo">
+          <a href="#home" class="logo">
             <img
               src="./assets/images/logo.svg"
               width="160"
@@ -109,7 +109,11 @@
 
           <ul class="navbar-list">
             <li class="navbar-item">
-              <a href="#home" class="navbar-link hover-underline active">
+              <a
+                href="#home"
+                class="navbar-link hover-underline active"
+                data-nav-link
+              >
                 <div class="separator"></div>
 
                 <span class="span">Home</span>
@@ -117,7 +121,7 @@
             </li>
 
             <li class="navbar-item">
-              <a href="#menu" class="navbar-link hover-underline">
+              <a href="#menu" class="navbar-link hover-underline" data-nav-link>
                 <div class="separator"></div>
 
                 <span class="span">Menus</span>
@@ -125,7 +129,11 @@
             </li>
 
             <li class="navbar-item">
-              <a href="#about" class="navbar-link hover-underline">
+              <a
+                href="#about"
+                class="navbar-link hover-underline"
+                data-nav-link
+              >
                 <div class="separator"></div>
 
                 <span class="span">About Us</span>
@@ -133,7 +141,7 @@
             </li>
 
             <li class="navbar-item">
-              <a href="#" class="navbar-link hover-underline">
+              <a href="#" class="navbar-link hover-underline" data-nav-link>
                 <div class="separator"></div>
 
                 <span class="span">Our Chefs</span>
@@ -141,7 +149,7 @@
             </li>
 
             <li class="navbar-item">
-              <a href="#" class="navbar-link hover-underline">
+              <a href="#" class="navbar-link hover-underline" data-nav-link>
                 <div class="separator"></div>
 
                 <span class="span">Contact</span>
@@ -514,16 +522,15 @@
                   loading="lazy"
                 />
               </div>
-
-              <img
-                src="./assets/images/shape-3.png"
-                alt="shape"
-                width="197"
-                height="194"
-                loading="lazy"
-                class="shape"
-              />
             </figure>
+            <img
+              src="./assets/images/shape-3.png"
+              alt="shape"
+              width="197"
+              height="194"
+              loading="lazy"
+              class="shape"
+            />
           </div>
         </section>
 
@@ -532,11 +539,11 @@
           <div class="special-dish-banner">
             <img
               src="./assets/images/special-dish-banner.jpg"
-              alt="special dish"
-              class="img-cover"
               width="940"
               height="900"
               loading="lazy"
+              alt="special dish"
+              class="img-cover"
             />
           </div>
 
@@ -544,10 +551,10 @@
             <div class="container">
               <img
                 src="./assets/images/badge-1.png"
-                alt="badge"
                 width="28"
                 height="41"
                 loading="lazy"
+                alt="badge"
                 class="abs-img"
               />
 
@@ -556,9 +563,11 @@
               <h2 class="headline-1 section-title">Lobster Tortellini</h2>
 
               <p class="section-text">
-                Lorem Ipsum is simply dummy text of the printingand typesetting
-                industry lorem Ipsum has been the industrys standard dummy text
-                ever since the when an unknown printer took a galley of type.
+                Indulge in our exquisite Lobster Tortellini, a culinary
+                masterpiece that combines tender pasta filled with succulent
+                lobster meat, bathed in a rich and creamy sauce, creating a
+                symphony of flavors that will delight your palate and leave you
+                craving for more.
               </p>
 
               <div class="wrapper">
@@ -569,6 +578,7 @@
 
               <a href="#" class="btn btn-primary">
                 <span class="text text-1">View All Menu</span>
+
                 <span class="text text-2" aria-hidden="true"
                   >View All Menu</span
                 >
@@ -578,19 +588,20 @@
 
           <img
             src="./assets/images/shape-4.png"
-            alt="shape"
             width="179"
             height="359"
-            class="shape shape-1"
             loading="lazy"
+            alt=""
+            class="shape shape-1"
           />
+
           <img
             src="./assets/images/shape-9.png"
-            alt="shape"
             width="351"
             height="462"
-            class="shape shape-2"
             loading="lazy"
+            alt=""
+            class="shape shape-2"
           />
         </section>
 
@@ -1016,8 +1027,368 @@
             </div>
           </div>
         </section>
+
+        <!-- Features -->
+        <section class="section features text-center">
+          <div class="container">
+            <p class="section-subtitle label-2">Why Choose Us</p>
+
+            <h2 class="headline-1 section-title">Our Features</h2>
+
+            <ul class="grid-list">
+              <li class="feature-item">
+                <div class="feature-card">
+                  <div class="card-icon">
+                    <img
+                      src="./assets/images/features-icon-1.png"
+                      alt="icon"
+                      width="100"
+                      height="80"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <h3 class="title-4 card-title">Hygienic Food</h3>
+
+                  <p class="label-1 card-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Debitis, vel.
+                  </p>
+                </div>
+              </li>
+              <li class="feature-item">
+                <div class="feature-card">
+                  <div class="card-icon">
+                    <img
+                      src="./assets/images/features-icon-2.png"
+                      alt="icon"
+                      width="100"
+                      height="80"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <h3 class="title-4 card-title">Hygienic Place</h3>
+
+                  <p class="label-1 card-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Debitis, vel.
+                  </p>
+                </div>
+              </li>
+              <li class="feature-item">
+                <div class="feature-card">
+                  <div class="card-icon">
+                    <img
+                      src="./assets/images/features-icon-3.png"
+                      alt="icon"
+                      width="100"
+                      height="80"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <h3 class="title-4 card-title">Skilled Chefs</h3>
+
+                  <p class="label-1 card-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Debitis, vel.
+                  </p>
+                </div>
+              </li>
+              <li class="feature-item">
+                <div class="feature-card">
+                  <div class="card-icon">
+                    <img
+                      src="./assets/images/features-icon-4.png"
+                      alt="icon"
+                      width="100"
+                      height="80"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <h3 class="title-4 card-title">Event & Party</h3>
+
+                  <p class="label-1 card-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Debitis, vel.
+                  </p>
+                </div>
+              </li>
+            </ul>
+
+            <img
+              src="./assets/images/shape-1.png"
+              alt="shape"
+              width="208"
+              height="178"
+              class="shape shape-1"
+              loading="lazy"
+            />
+            <img
+              src="./assets/images/shape-8.png"
+              alt="shape"
+              width="120"
+              height="115"
+              class="shape shape-2"
+              loading="lazy"
+            />
+          </div>
+        </section>
+
+        <!-- Event -->
+        <section class="section event bg-black-10">
+          <div class="container">
+            <p class="section-subtitle label-2 text-center">Recent Updates</p>
+
+            <h2 class="section-title headline-1 text-center">
+              Upcoming Events
+            </h2>
+
+            <ul class="grid-list">
+              <li>
+                <div class="event-card has-before hover:shine">
+                  <div
+                    class="card-banner img-holder"
+                    style="--width: 350; --height: 450"
+                  >
+                    <img
+                      src="./assets/images/event-1.jpg"
+                      width="350"
+                      height="450"
+                      loading="lazy"
+                      alt="Flavour so good you’ll try to eat with your eyes."
+                      class="img-cover"
+                    />
+
+                    <time datetime="2023-10-15" class="publish-date label-2"
+                      >15 Oct 2023</time
+                    >
+                  </div>
+
+                  <div class="card-content">
+                    <p class="card-subtitle label-2 text-center">
+                      Food, Flavour
+                    </p>
+
+                    <h3 class="card-title title-2 text-center">
+                      Flavour so good you’ll try to eat with your eyes.
+                    </h3>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="event-card has-before hover:shine">
+                  <div
+                    class="card-banner img-holder"
+                    style="--width: 350; --height: 450"
+                  >
+                    <img
+                      src="./assets/images/event-2.jpg"
+                      width="350"
+                      height="450"
+                      loading="lazy"
+                      alt="Flavour so good you’ll try to eat with your eyes."
+                      class="img-cover"
+                    />
+
+                    <time datetime="2023-10-12" class="publish-date label-2"
+                      >12 Oct 2023</time
+                    >
+                  </div>
+
+                  <div class="card-content">
+                    <p class="card-subtitle label-2 text-center">
+                      Healthy Food
+                    </p>
+
+                    <h3 class="card-title title-2 text-center">
+                      Flavour so good you’ll try to eat with your eyes.
+                    </h3>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="event-card has-before hover:shine">
+                  <div
+                    class="card-banner img-holder"
+                    style="--width: 350; --height: 450"
+                  >
+                    <img
+                      src="./assets/images/event-3.jpg"
+                      width="350"
+                      height="450"
+                      loading="lazy"
+                      alt="Flavour so good you’ll try to eat with your eyes."
+                      class="img-cover"
+                    />
+
+                    <time datetime="2023-10-13" class="publish-date label-2"
+                      >13 Oct 2023</time
+                    >
+                  </div>
+
+                  <div class="card-content">
+                    <p class="card-subtitle label-2 text-center">Recipie</p>
+
+                    <h3 class="card-title title-2 text-center">
+                      Flavour so good you’ll try to eat with your eyes.
+                    </h3>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <a href="#" class="btn btn-primary">
+              <span class="text text-1">View Our Blog</span>
+              <span class="text text-2" aria-hidden="true">View Our Blog</span>
+            </a>
+          </div>
+        </section>
       </article>
     </main>
+
+    <!-- Footer -->
+
+    <footer
+      class="footer section has-bg-image text-center"
+      style="background-image: url(./assets/images/footer-bg.jpg)"
+    >
+      <div class="container">
+        <div class="footer-top grid-list">
+          <div class="footer-brand has-before has-after">
+            <a href="#" class="logo">
+              <img
+                src="./assets/images/logo.svg"
+                alt="grilli home"
+                width="160"
+                height="40"
+                loading="lazy"
+              />
+            </a>
+
+            <address class="body-4">
+              Restaurant St, Delicious City, London 9578, UK
+            </address>
+
+            <a href="mailto:booking@grilli.com" class="body-4 contact-link"
+              >booking@grilli.com</a
+            >
+
+            <a href="tel:+88123123456" class="body-4 contact-link"
+              >Booking Request : +88-123-123456</a
+            >
+
+            <p class="body-4">Open : 09:00 am - 01:00 pm</p>
+
+            <div class="wrapper">
+              <div class="separator"></div>
+              <div class="separator"></div>
+              <div class="separator"></div>
+            </div>
+
+            <p class="title-1">Get News & Offers</p>
+
+            <p class="label-1">
+              Subscribe us & Get <span class="span">25% Off.</span>
+            </p>
+
+            <form action="" class="input-wrapper">
+              <div class="icon-wrapper">
+                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+                <input
+                  type="email"
+                  class="input-field"
+                  name="email_address"
+                  autocomplete="off"
+                  placeholder="Your Email"
+                />
+              </div>
+
+              <button type="submit" class="btn btn-secondary">
+                <span class="text text-1">Subscribe</span>
+                <span class="text text-2" aria-hidden="true">Subscribe</span>
+              </button>
+            </form>
+          </div>
+
+          <ul class="footer-list">
+            <li>
+              <a href="#" class="label-2 footer-link hover-underline">Home</a>
+            </li>
+            <li>
+              <a href="#" class="label-2 footer-link hover-underline">Menus</a>
+            </li>
+            <li>
+              <a href="#" class="label-2 footer-link hover-underline"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a href="#" class="label-2 footer-link hover-underline"
+                >Our Chefs</a
+              >
+            </li>
+            <li>
+              <a href="#" class="label-2 footer-link hover-underline"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <a href="#" class="label-2 footer-link hover-underline"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a href="#" class="label-2 footer-link hover-underline"
+                >Twitter</a
+              >
+            </li>
+            <li>
+              <a href="#" class="label-2 footer-link hover-underline"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a href="#" class="label-2 footer-link hover-underline"
+                >Youtube</a
+              >
+            </li>
+            <li>
+              <a href="#" class="label-2 footer-link hover-underline"
+                >Google Map</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; 2022 Grilli. All Rights Reserved | Crafted by
+            <a
+              href="https://github.com/codewithsadee"
+              target="_blank"
+              class="link"
+              >codewithsadee</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a
+      href="#top"
+      class="back-to-top active"
+      aria-label="Back to top"
+      data-back-top-btn
+    >
+      <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+    </a>
 
     <!-- custom JS -->
     <script src="./assets/js/script.js"></script>
