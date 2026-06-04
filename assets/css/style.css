@@ -609,7 +609,7 @@ body.nav-active {
   -moz-transition: var(--transition-2);
   -ms-transition: var(--transition-2);
   -o-transition: var(--transition-2);
-  display: none;
+  display: grid;
 }
 
 .preload > * {
@@ -1488,7 +1488,7 @@ textarea.input-field {
 }
 
 .form-right {
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: top left;
 }
 /*-----------------------------------*\
